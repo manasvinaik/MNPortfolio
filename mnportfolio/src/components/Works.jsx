@@ -7,31 +7,32 @@ export const Works = () => {
     <section className="bg-black p-4 md:p-4">
       <div className="mx-auto max-w-5xl">
         {/* My Projects Heading */}
-        <h2 className="text-4xl font-bold text-white mb-4">My Projects</h2>
+        <h2 className="text-3xl font-bold text-white mb-4">My Projects</h2>
+        <div className="w-full border-b-2 border-indigo-300 mb-4" />
 
         {/* Project Links */}
         <Link
           heading="Chitra"
           subheading="Aesthetic AI Image Generator"
-          imgSrc="/imgs/random/11.jpg"
+          imgSrc="/media/chitra.png"
           href="#"
         />
         <Link
           heading="Magical Brews"
-          subheading=" Fantastical 2D Unity game"
-          imgSrc="./media/magicbrews.png"
+          subheading="Fantastical 2D Unity game"
+          imgSrc="/media/magicbrews.png"
           href="#"
         />
         <Link
           heading="Fantasia"
           subheading="Book Recommender"
-          imgSrc="/imgs/random/4.jpg"
+          imgSrc="/media/fanta.png"
           href="#"
         />
         <Link
           heading="Nebuleus"
           subheading="Time-Keeper Project"
-          imgSrc="/imgs/random/5.jpg"
+          imgSrc="/media/nebuleus.png"
           href="#"
         />
       </div>
@@ -101,7 +102,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
             </motion.span>
           ))}
         </motion.span>
-        <span className="relative z-10 mt-2 block text-base text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50">
+        <span className="relative z-10 mt-2 block text-base text-neutral-500 transition-colors duration-500 group-hover:text-indigo-300">
           {subheading}
         </span>
       </div>
