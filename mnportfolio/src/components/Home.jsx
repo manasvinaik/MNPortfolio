@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Example from './BubbleText';
+import { Vortex } from './Vortex'; // Import the Vortex component
 
 const Home = () => {
   const name = "Manasvi";
@@ -10,24 +11,35 @@ const Home = () => {
     return text.split("").map((letter, index) => (
       <motion.span
         key={index}
-        initial={{ y: 50, opacity: 0 }} // Start from below and invisible
-        animate={{ y: 0, opacity: 1 }} // Animate to original position and visible
-        transition={{ duration: 0.9, delay: index === 0 ? 0.1 : index * 0.1 }} // Delay first letter more
+        initial={{ opacity: 0 }} // Start invisible
+        animate={{ opacity: 1 }} // Animate to visible
+        transition={{
+          duration: 0.25,
+          delay: index / 10 // Delay for each letter
+        }}
       >
         {letter}
       </motion.span>
     ));
   };
-  
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
-      <h1 className="text-9xl font-bold">
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white">
+      {/* Vortex background component */}
+      
+      
+      {/* Ensure z-index is higher for the text and other components */}
+      <h1 className="text-9xl font-bold z-20">
         {createLetterAnimation(name)}
       </h1>
-      <h2 className="text-8xl font-bold">
+      <h2 className="text-8xl font-bold z-20">
         {createLetterAnimation(surname)}
       </h2>
-      <Example />
+      
+      {/* Example component with z-index */}
+      <div className="z-20">
+        <Example />
+      </div>
     </div>
   );
 };

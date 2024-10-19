@@ -3,7 +3,7 @@ import styles from "./bubble.module.css";
 
 const Example = () => {
   return (
-    <div className="grid place-content-center bg-black">
+    <div className="grid place-content-center">
       <BubbleText />
     </div>
   );
@@ -11,7 +11,7 @@ const Example = () => {
 
 const BubbleText = () => {
   return (
-    <h2 className="text-center text-7xl font-thin text-indigo-300">
+    <h2 className="text-center text-7xl font-thin text-indigo-300 ">
       {"aspiring webdeveloper".split("").map((child, idx) => (
         <span className={styles.hoverText} key={idx}>
           {child}
