@@ -15,24 +15,24 @@ const Home = () => {
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white overflow-hidden">
       <motion.h1 
-        className="text-9xl font-bold z-20" 
+        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold z-20" // Responsive font sizes
         initial="hidden" 
         animate="visible" 
         variants={slideIn} 
-        transition={{ duration: 0.5, ease: 'easeOut' }} // Adjust duration and easing as needed
+        transition={{ duration: 0.5, ease: 'easeOut' }} 
       >
         {name}
       </motion.h1>
       <motion.h2 
-        className="text-8xl font-bold z-20" 
+        className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold z-20" // Responsive font sizes
         initial="hidden" 
         animate="visible" 
         variants={slideIn} 
-        transition={{ duration: 0.5, ease: 'easeOut' }} // Optional delay
+        transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         {surname}
       </motion.h2>
-      <div className="z-20">
+      <div className="z-20 mt-4"> {/* Added margin for spacing on mobile */}
         <Example />
       </div>
     </div>

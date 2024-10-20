@@ -19,13 +19,13 @@ const BubbleText = () => {
 
   return (
     <motion.h2
-      className="text-center text-7xl font-thin text-indigo-300"
+      className="text-center text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-thin text-indigo-300" // Adjusted font size for responsiveness
       initial="hidden" // Set initial state to hidden
       animate="visible" // Animate to visible
       variants={appearFromTop} // Apply the variants
       transition={{ duration: 0.5, ease: "easeOut" }} // Adjust duration and easing as needed
     >
-      {"aspiring webdeveloper".split("").map((child, idx) => (
+      {"frontend webdeveloper".split("").map((child, idx) => (
         <span className={styles.hoverText} key={idx}>
           {child}
         </span>
