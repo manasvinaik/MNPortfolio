@@ -3,12 +3,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Para = ({ scrollY, aboutRef }) => {
-  const dummyParagraph = "This is a dummy paragraph meant to demonstrate the scrolling effect. " +
-    "As you scroll down, you will see the text gradually become more visible. " +
-    "This creates a nice transition that feels smooth and engaging. " +
-    "It is important to ensure that the layout is responsive to different screen sizes. " +
-    "You can adjust the styles as needed to fit your design preferences. " +
-    "Enjoy scrolling through this content and observe how it appears.";
+  const dummyParagraph = "As you explore, you'll discover various projects and experiences that highlight my skills and interests. " +
+"This is an overview of my journey in the tech and creative fields. \n\n" +
+"I’m always eager to learn and grow, so every new project contributes to my development as a tech enthusiast. " +
+"Feel free to dive into the details and see what I’ve been up to! \n\n" +
+"Technologies I'm familiar with:";
 
   const getRevealStyle = (index) => {
     const componentTop = aboutRef.current?.offsetTop || 0;
@@ -19,7 +18,7 @@ const Para = ({ scrollY, aboutRef }) => {
     const paraDivThreshold = paraDivTop + 0.05 * windowHeight;
 
     // Calculate the reveal fraction based on scroll position
-    const revealFraction = Math.min(Math.max((scrollY*2 + windowHeight - paraDivThreshold - index * 2.5) / (windowHeight * 0.5), 0), 1); // Adjusted for faster reveal
+    const revealFraction = Math.min(Math.max((scrollY * 2 + windowHeight - paraDivThreshold - index * 2.5) / (windowHeight * 0.5), 0), 1); // Adjusted for faster reveal
 
     return {
       opacity: 0.4 + revealFraction * (1 - 0.4), // Start from 0.4 and go to 1
@@ -29,7 +28,7 @@ const Para = ({ scrollY, aboutRef }) => {
 
   return (
     <div className="flex justify-center mt-8">
-      <div className={`text-white text-center w-[50%] text-xl md:text-2xl`}> {/* Increased text size */}
+      <div className={`text-white text-center w-[60%] text-xl md:text-2xl text-justify`}>
         {dummyParagraph.split('').map((char, index) => (
           <motion.span
             key={index}

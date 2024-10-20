@@ -54,7 +54,7 @@ const About = () => {
   };
 
   return (
-    <div ref={aboutRef} className="min-h-[100vh] bg-black p-4">
+    <div ref={aboutRef} className="min-h-[150vh] bg-black p-4">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-2xl text-white mb-4 text-left sm:text-left md:text-left">About</h2>
         <div className="w-full border-b-2 border-indigo-300 mb-4" />
@@ -71,9 +71,9 @@ const About = () => {
             </motion.span>
           ))}
         </div>
-
-        {/* Use DummyParagraph Component */}
-        <Para scrollY={scrollY} aboutRef={aboutRef} />
+        <div className="mt-16 mb-16"> {/* Adjust the margin as needed */}
+          <Para scrollY={scrollY} aboutRef={aboutRef} />
+        </div>
       </div>
     </div>
   );
