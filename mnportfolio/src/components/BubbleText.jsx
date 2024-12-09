@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import motion
+import { motion } from "framer-motion";
 import styles from "./bubble.module.css";
 
 const Example = () => {
@@ -11,24 +11,38 @@ const Example = () => {
 };
 
 const BubbleText = () => {
-  // Animation variants for appearing from the top
-  const appearFromTop = {
-    hidden: { opacity: 0, y: -20 }, // Start slightly above and invisible
-    visible: { opacity: 1, y: 0 }, // End at the original position and fully visible
+  // Animation variants for staggered effect
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05, // Adjust this value to control the delay between each letter
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
     <motion.h2
-      className="text-center text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-thin text-indigo-300" // Adjusted font size for responsiveness
-      initial="hidden" // Set initial state to hidden
-      animate="visible" // Animate to visible
-      variants={appearFromTop} // Apply the variants
-      transition={{ duration: 0.5, ease: "easeOut" }} // Adjust duration and easing as needed
+      className="text-center text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-thin text-indigo-300"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
     >
-      {"frontend webdeveloper".split("").map((child, idx) => (
-        <span className={styles.hoverText} key={idx}>
-          {child}
-        </span>
+      {"frontend developer".split("").map((char, index) => (
+        <motion.span
+          className={styles.hoverText}
+          key={index}
+          variants={letterVariants}
+          transition={{ duration: 0.3, ease: "easeOut" }} // Adjust duration as needed
+        >
+          {char}
+        </motion.span>
       ))}
     </motion.h2>
   );

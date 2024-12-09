@@ -21,7 +21,7 @@ const Para = ({ scrollY, aboutRef }) => {
     const revealFraction = Math.min(Math.max((scrollY * 2 + windowHeight - paraDivThreshold - index * 2.5) / (windowHeight * 0.5), 0), 1); // Adjusted for faster reveal
 
     return {
-      opacity: 0.4 + revealFraction * (1 - 0.4), // Start from 0.4 and go to 1
+      opacity: 0.4 + revealFraction * (1 - 0.1), // Start from 0.4 and go to 1
       transition: { duration: 0 }, // Reduced duration for quicker transition
     };
   };
@@ -32,7 +32,7 @@ const Para = ({ scrollY, aboutRef }) => {
         {dummyParagraph.split('').map((char, index) => (
           <motion.span
             key={index}
-            initial={{ opacity: 0.4 }} // Set initial opacity to 0.4
+            initial={{ opacity: 0.2 }} // Set initial opacity to 0.4
             animate={getRevealStyle(index)}
             style={{ whiteSpace: 'pre-wrap' }}
           >
