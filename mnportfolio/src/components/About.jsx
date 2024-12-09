@@ -54,7 +54,7 @@ const About = () => {
   };
 
   return (
-    <div ref={aboutRef} className="min-h-[100vh] bg-black p-4">
+    <div ref={aboutRef} className="min-h-[100vh] bg-#161618 p-4">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-2xl text-white mb-4 text-left sm:text-left md:text-left">About</h2>
         <div className="w-full border-b-2 border-indigo-300 mb-4" />

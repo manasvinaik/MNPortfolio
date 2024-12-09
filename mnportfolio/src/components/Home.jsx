@@ -13,9 +13,10 @@ const Home = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-#161618 text-white overflow-hidden">
       <motion.h1 
-        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold z-20" // Responsive font sizes
+        className="text-8xl sm:text-9xl md:text-[11rem] lg:text-[12rem] xl:text-[10rem] z-20" // Much larger text sizes
+        style={{ fontFamily: 'HenriDidot, serif' }} // Applying HenriDidot font
         initial="hidden" 
         animate="visible" 
         variants={slideIn} 
@@ -24,7 +25,8 @@ const Home = () => {
         {name}
       </motion.h1>
       <motion.h2 
-        className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold z-20" // Responsive font sizes
+        className="text-7xl sm:text-8xl md:text-[10rem] lg:text-[11rem] xl:text-[9rem] z-20" // Much larger text sizes
+        style={{ fontFamily: 'HenriDidot, serif' }} // Applying HenriDidot font
         initial="hidden" 
         animate="visible" 
         variants={slideIn} 

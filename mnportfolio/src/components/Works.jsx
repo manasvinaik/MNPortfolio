@@ -15,25 +15,25 @@ export const Works = () => {
           heading="Chitra"
           subheading="Aesthetic AI Image Generator"
           imgSrc="/media/chitra.png"
-          href="#"
+          href="https://github.com/manasvinaik/chitra"
         />
         <Link
           heading="Magical Brews"
           subheading="Fantastical 2D Unity game"
           imgSrc="/media/magicbrews.png"
-          href="#"
+          href="https://github.com/manasvinaik/Magical-Brews"
         />
         <Link
           heading="Fantasia"
           subheading="Book Recommender"
           imgSrc="/media/fanta.png"
-          href="#"
+          href="https://github.com/manasvinaik/fantasia"
         />
         <Link
           heading="Nebuleus"
           subheading="Time-Keeper Project"
           imgSrc="/media/nebuleus.png"
-          href="#"
+          href="https://github.com/manasvinaik/Focus-Keeper-Website-Nebuleus"
         />
       </div>
     </section>
